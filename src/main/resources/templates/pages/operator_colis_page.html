@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layouts/master}">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator colis management</title>
+</head>
+<body>
+<div layout:fragment="content" th:remove="tag">
+
+    <div class="modal fade" id="operatorupdateColiModal" tabindex="-1" role="dialog" aria-labelledby="updateColiLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editer un coli</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form th:action="${linkEdit}" id="operatorupdateColiForm" method="post" role="form">
+                        <input type="hidden" name="idColis"/>
+                        <div class="form-group">
+                            <input type="number" name="latitude" class="form-control" placeholder="Latitude" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="longitude" class="form-control" placeholder="Longitude" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="emplacement" class="form-control" placeholder="Emplacement">
+                        </div>
+                        <div class="form-group">
+                            <input list="colisEtatList" name="etat" class="form-control" placeholder="Etat">
+                            <div layout:insert="pages/partials/etatsList :: etatsList" th:remove="tag"></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" form="operatorupdateColiForm" class="btn btn-outline-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="container-fluid">
+        <h1>Operator Liste des colis</h1>
+        <article class="row ml-0 mr-0" style="min-width: 466px">
+            <div class="col-md-11">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <!-- Alert success-->
+                        <div th:if="${#httpServletRequest.getParameter('successMessage')}"
+                             class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Congratulation!</strong> <span
+                                th:text="${#httpServletRequest.getParameter('successMessage')}"></span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <!-- Error message -->
+                        <div th:if="${#httpServletRequest.getParameter('errorMessage')}"
+                             class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Error!</strong> <span
+                                th:text="${#httpServletRequest.getParameter('errorMessage')}"></span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <!-- Content -->
+                        <table class="table table-hover">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Poids</th>
+                                <th scope="col">Valeur</th>
+                                <th scope="col">Origin</th>
+                                <th scope="col">Destionation</th>
+                                <th scope="col">Latitude</th>
+                                <th scope="col">Longitude</th>
+                                <th scope="col">Emplacement</th>
+                                <th scope="col">Etat</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody th:if="${lesColis}">
+                            <tr th:each="coli: ${lesColis}">
+                                <th scope="row" th:text="${coli.idColis}"></th>
+                                <td th:text="${coli.poidsColis}"></td>
+                                <td th:text="${coli.valeurColis}"></td>
+                                <td th:text="${coli.origineColis}"></td>
+                                <td th:text="${coli.destinationColis}"></td>
+                                <td th:text="${coli.latitude}"></td>
+                                <td th:text="${coli.longitude}"></td>
+                                <td th:text="${coli.emplacement}"></td>
+                                <td th:text="${coli.etat}"></td>
+                                <td class="row ml-0 mr-0" th:data-content="${coli}"
+                                    style="
+                                        max-width: 166px;
+                                        min-width: 100px;
+                                    ">
+                                    <div class="col-md p-0 text-center">
+                                        <a th:onclick="'updateModal('+${coliStat.index}+')'" href
+                                           data-toggle="modal" data-target="#operatorupdateColiModal"><i
+                                                class="fa fa-edit text-warning"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+</div>
+<div layout:fragment="scripts" th:remove="tag">
+    <!-- scripts -->
+    <script th:inline="javascript">
+        let colis = /*[[${lesColis}]]*/ {};
+
+        function updateModal(indexColi) {
+            let target = '#operatorupdateColiForm',
+                coli = colis[indexColi];
+            $(target + ' [name=latitude]').val(coli.latitude);
+            $(target + ' [name=longitude]').val(coli.longitude);
+            $(target + ' [name=emplacement]').val(coli.emplacement);
+            $(target + ' [name=etat]').val(coli.etat);
+            $(target + ' [name=idColis]').val(coli.idColis);
+        }
+    </script>
+
+</div>
+
+</body>
+</html>
