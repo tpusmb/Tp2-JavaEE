@@ -1,4 +1,4 @@
-package com.jsfspring.curddemo.utills;
+package com.big_fat_trololo.utills;
 
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
@@ -9,8 +9,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jsfspring.curddemo.service.DepartmentService;
-import com.jsfspring.curddemo.uito.DepartmentUITO;
+import com.big_fat_trololo.service.DepartmentService;
+import com.big_fat_trololo.uito.DepartmentUITO;
 
 @Service
 public class DeptConverter implements Converter {

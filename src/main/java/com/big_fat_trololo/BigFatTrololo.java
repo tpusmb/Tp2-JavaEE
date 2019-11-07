@@ -1,4 +1,4 @@
-package com.jsfspring.curddemo;
+package com.big_fat_trololo;
 
 import javax.faces.webapp.FacesServlet;
 import javax.servlet.Servlet;
@@ -12,10 +12,10 @@ import org.springframework.context.annotation.Bean;
 import com.sun.faces.config.ConfigureListener;
 
 @SpringBootApplication
-public class SpringJsfApplication extends SpringBootServletInitializer {
+public class BigFatTrololo extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringJsfApplication.class, args);
+		SpringApplication.run(BigFatTrololo.class, args);
 	}
 
 	/*

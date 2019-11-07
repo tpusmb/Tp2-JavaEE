@@ -5,21 +5,20 @@
  * @author s727953
  *
  */
-package com.jsfspring.curddemo.service.impl;
+package com.big_fat_trololo.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.big_fat_trololo.entity.DepartmentDTO;
+import com.big_fat_trololo.repositry.DepartmentRepo;
+import com.big_fat_trololo.uito.DepartmentUITO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jsfspring.curddemo.entity.DepartmentDTO;
-import com.jsfspring.curddemo.repositry.DepartmentRepo;
-import com.jsfspring.curddemo.service.DepartmentService;
-import com.jsfspring.curddemo.uito.DepartmentUITO;
-import com.jsfspring.curddemo.uito.EmployeeUITO;
+import com.big_fat_trololo.service.DepartmentService;
 
 @Service
 @Transactional

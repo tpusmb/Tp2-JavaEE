@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jsfspring.curddemo.entity;
+package com.big_fat_trololo.entity;
 
 import java.io.Serializable;
 

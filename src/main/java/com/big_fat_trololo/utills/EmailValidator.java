@@ -1,4 +1,4 @@
-package com.jsfspring.curddemo.utills;
+package com.big_fat_trololo.utills;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,9 +1,9 @@
 
-package com.jsfspring.curddemo.service;
+package com.big_fat_trololo.service;
 
 import java.util.List;
 
-import com.jsfspring.curddemo.uito.EmployeeUITO;
+import com.big_fat_trololo.uito.EmployeeUITO;
 
 public interface EmployeeService {
 	EmployeeUITO doSaveEmp(EmployeeUITO employeeUiTO);

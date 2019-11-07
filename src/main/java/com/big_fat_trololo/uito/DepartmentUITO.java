@@ -1,4 +1,4 @@
-package com.jsfspring.curddemo.uito;
+package com.big_fat_trololo.uito;
 
 import java.io.Serializable;
 import java.util.List;

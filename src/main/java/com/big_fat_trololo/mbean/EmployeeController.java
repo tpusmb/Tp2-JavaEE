@@ -5,7 +5,7 @@
  * @author s727953
  *
  */
-package com.jsfspring.curddemo.mbean;
+package com.big_fat_trololo.mbean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,16 +13,16 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 
+import com.big_fat_trololo.uito.DepartmentUITO;
+import com.big_fat_trololo.uito.EmployeeUITO;
 import org.primefaces.context.RequestContext;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.context.annotation.SessionScope;
 
-import com.jsfspring.curddemo.service.DepartmentService;
-import com.jsfspring.curddemo.service.EmployeeService;
-import com.jsfspring.curddemo.uito.DepartmentUITO;
-import com.jsfspring.curddemo.uito.EmployeeUITO;
+import com.big_fat_trololo.service.DepartmentService;
+import com.big_fat_trololo.service.EmployeeService;
 
 @Controller("emplController")
 @SessionScope

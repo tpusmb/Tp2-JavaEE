@@ -1,4 +1,4 @@
-package com.jsfspring.curddemo.utills;
+package com.big_fat_trololo.utills;
 
 public final class JsfSpringCurd {
 

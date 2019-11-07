@@ -1,9 +1,8 @@
-package com.jsfspring.curddemo.repositry;
+package com.big_fat_trololo.repositry;
 
+import com.big_fat_trololo.entity.EmployeeDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import com.jsfspring.curddemo.entity.EmployeeDTO;
 
 @Repository
 public interface EmployeeRepo extends JpaRepository<EmployeeDTO, Long> {
