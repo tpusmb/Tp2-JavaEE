@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+.login {
+    width: 100%;
+    length: 100%;
+    padding: 4.5rem 0rem;
+}
+.button {
+    margin: 1rem 0rem;
+}
+.main {
+    padding: 4.5rem 0rem;
+}
+
+.margin-top-30 {
+    margin-top : 30px;
+}
+
+.container {
+    margin-left:50px;
+    margin-right:50px;
+}
+
+.margin-bottom-30 {
+    margin-bottom : 30px;
+}
