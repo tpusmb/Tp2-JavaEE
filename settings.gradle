@@ -19,11 +19,11 @@ rootProject.name = 'BacklogsTP'
 
 include ':BigFatEjb'
 include ':BacklogWeb'
-include ':BacklogEar'
+include ':BigFatEar'
 //include ':CompteEjb'
 //include ':CompteWeb'
 //include ':CompteEar'
 
 project(':BigFatEjb').projectDir = "$rootDir/BigFatEjb" as File
 project(':BacklogWeb').projectDir = "$rootDir/BacklogWeb" as File
-project(':BacklogEar').projectDir = "$rootDir/BacklogEar" as File
+project(':BigFatEar').projectDir = "$rootDir/BigFatEar" as File
