@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
 
             req.getRequestDispatcher("/index.jsp").forward(req, resp);
         } catch ( EJBException e){
-            req.setAttribute("error", "Wrong Creditentials !");
+            req.setAttribute("error", "Error creditential !");
             req.getRequestDispatcher("/login.jsp").forward(req, resp);
         }
 

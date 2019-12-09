@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Application de gestion de gestion de backlog</title>
+	<title>Gestion de backlog</title>
 	<link rel="stylesheet" type="text/css" href="asset/css/base.css" >
     <link rel="stylesheet" type="text/css" href="asset/css/spectre.min.css">
     <link rel="stylesheet" type="text/css" href="asset/css/spectre-exp.min.css">
@@ -13,7 +13,6 @@
 </head>
 <body>
 <header class="navbar" style="padding: 1rem; box-shadow: 2px 2px 2px lightgrey;">
-    <!-- Logo, here on the left -->
     <section class="navbar-primary">
             <a href="/BigFatWeb" class="navbar-brand"><img src="asset/img/favicon-256.png" width="32" height="32" alt=""></a>
     </section>
@@ -42,14 +41,14 @@
             </c:if>
         </div>
         <div class="column col-6 p-centered">
-            <h1 class="text-center">Application de gestion de backlog</h1>
+            <h1 class="text-center">Gestion de backlog</h1>
             <c:if test="${currentUser != null}">
                 <div>
                     <form action="CreateAgencyServlet" method="post">
                         <label class="form-label" for="name">Name</label>
                         <input class="form-input" name="name" type="text" id="name" placeholder="Name">
 
-                        <button type="submit" class="btn btn-primary button">Ajouter une agence</button>
+                        <button type="submit" class="btn btn-primary button">Crée une agence</button>
                     </form>
                 </div>
                 <div>
@@ -114,7 +113,7 @@
                             <form class="d-inline-block" action="DeleteBacklogEntryServlet" method="get">
                                 <input type="hidden" name="backlog_id" value="${backlog_id}">
                                 <input type="hidden" name="entry_id" value="${entry.id}">
-                                <button class="btn btn-primary" onclick="return window.confirm('Êtes-vous sûr de vouloir supprimer cette entrée ?');"><i class="icon icon-delete"></i></button>
+                                <button class="btn btn-primary" onclick="return window.confirm('Supprimer cette entrée ?');"><i class="icon icon-delete"></i></button>
                             </form>
                         </td>
                     </tr>

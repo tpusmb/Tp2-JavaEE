@@ -25,11 +25,11 @@
         <!-- form input control -->
         <div class="form-group">
             <form action="LoginServlet" method="post">
-                <label class="form-label" for="username">Name</label>
+                <label class="form-label" for="username">Nom</label>
                 <input class="form-input" name="username" type="text" id="username" placeholder="Name">
                 <label class="form-label" for="password">Password</label>
                 <input class="form-input" name="password" type="password" id="password" placeholder="Password">
-                <button class="btn btn-primary button" type="submit">Sign in</button>
+                <button class="btn btn-primary button" type="submit">login</button>
             </form>
         </div>
         </div>

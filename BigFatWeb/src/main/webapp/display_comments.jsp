@@ -40,8 +40,8 @@
                         ${error}
                 </div>
             </c:if>
-            <h2 class="text-center">Entry n° ${entry.id}</h2>
-            <p>Name : ${entry.name}</p>
+            <h2 class="text-center">ID: ${entry.id}</h2>
+            <p>Nom : ${entry.name}</p>
             <p>Estimation : ${entry.estimation}</p>
             <p>Priorité : ${entry.priority}</p>
             <p>Description : ${entry.description}</p>

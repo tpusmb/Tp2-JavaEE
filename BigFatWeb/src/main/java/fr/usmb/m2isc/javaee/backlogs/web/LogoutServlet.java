@@ -17,7 +17,7 @@ public class LogoutServlet extends HttpServlet {
         HttpSession httpsession = req.getSession();
         User u = (User) httpsession.getAttribute("currentUser");
         httpsession.setAttribute("currentUser",null);
-        String message = "Good bye " + u.getUsername() + " !";
+        String message = "Salut bro " + u.getUsername() + " !";
 
         req.setAttribute("global_notification_success",true);
         req.setAttribute("message",message);

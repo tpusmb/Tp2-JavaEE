@@ -18,7 +18,7 @@
     <section class="navbar-section">
         <c:choose>
             <c:when test="${currentUser == null}">
-                <a href="/BigFatWeb/LoginServlet" class="btn btn-success">Sign In</a>
+                <a href="/BigFatWeb/LoginServlet" class="btn btn-success">Login</a>
             </c:when>
             <c:otherwise>
                 <a href="/BigFatWeb" class="btn btn-link"><i class="icon icon-2x icon-people"></i>  <span class="text-large" style="margin-left: 0.5rem;vertical-align: super;">${sessionScope.currentUser.username}</span> </a>
@@ -39,20 +39,20 @@
                         ${error}
                 </div>
             </c:if>
-            <h2>Ajouter au backlog</h2>
+            <h2>Ajouter backlog</h2>
             <!-- form input control -->
             <div class="form-group">
                 <form action="AddNewBacklogServlet" method="post">
                     <input type="hidden" name="backlog_id" value="${backlog_id}">
-                    <label class="form-label" for="name">Name</label>
+                    <label class="form-label" for="name">Nom</label>
                     <input class="form-input" name="name" type="text" id="name" placeholder="Name">
-                    <label class="form-label" for="priority" >Priorité</label>
+                    <label class="form-label" for="priority" >niveau de priorité</label>
                     <input class="form-input" id="priority" name="priority" type="number">
                     <label class="form-label" for="estimation">Estimation</label>
                     <input class="form-input" id="estimation" name="estimation" type="number">
                     <label class="form-label" for="textarea">Description</label>
                     <textarea class="form-input" id="textarea" name="description" placeholder="Textarea" rows="3"></textarea>
-                    <button class="btn btn-primary button" type="submit">Ajouter</button>
+                    <button class="btn btn-primary button" type="submit">Crée</button>
                 </form>
             </div>
         </div>

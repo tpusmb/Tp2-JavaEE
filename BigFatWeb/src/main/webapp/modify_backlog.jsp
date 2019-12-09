@@ -39,12 +39,12 @@
                         ${error}
                 </div>
             </c:if>
-            <h2>Modifier une entrée du backlog</h2>
+            <h2>Modifier une entrée</h2>
             <!-- form input control -->
             <div class="form-group">
                 <form action="ModifyBacklogEntryServlet" method="post">
                     <input type="hidden" name="entry_id" value="${entry.id}">
-                    <label class="form-label" for="name">Name</label>
+                    <label class="form-label" for="name">Nom</label>
                     <input class="form-input" name="name" type="text" id="name" placeholder="Name" value="${entry.name}">
                     <label class="form-label" for="priority" >Priorité</label>
                     <input class="form-input" id="priority" name="priority" type="number" value="${entry.priority}">
@@ -52,7 +52,7 @@
                     <input class="form-input" id="estimation" name="estimation" type="number" value="${entry.estimation}">
                     <label class="form-label" for="textarea">Description</label>
                     <textarea class="form-input" id="textarea" name="description" placeholder="Textarea" rows="3">${entry.description}</textarea>
-                    <button class="btn btn-primary button" type="submit">Modifier</button>
+                    <button class="btn btn-primary button" type="submit">Edit</button>
                 </form>
             </div>
         </div>
