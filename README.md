@@ -11,8 +11,8 @@ On peut :
 - visualiser/ajouter des commantires sur une entrée
 
 Des utlisateurs sont créér au lancement de l'application : 
-- Username : `trima`, password: `trima`
-- Username : `ludo`, password: `ludo`
+- Username : `bob`, password: `eponge`
+- Username : `stephane`, password: `talbot`
 ## Getting started
 ### Démarrer la BDD Glassfish 
 Dans le dossier où se trouve Glassfish

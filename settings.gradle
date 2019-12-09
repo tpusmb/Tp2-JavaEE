@@ -17,13 +17,13 @@ include 'services:webservice'
 
 rootProject.name = 'BacklogsTP'
 
-include ':BacklogEjb'
+include ':BigFatEjb'
 include ':BacklogWeb'
 include ':BacklogEar'
 //include ':CompteEjb'
 //include ':CompteWeb'
 //include ':CompteEar'
 
-project(':BacklogEjb').projectDir = "$rootDir/BacklogEjb" as File
+project(':BigFatEjb').projectDir = "$rootDir/BigFatEjb" as File
 project(':BacklogWeb').projectDir = "$rootDir/BacklogWeb" as File
 project(':BacklogEar').projectDir = "$rootDir/BacklogEar" as File

@@ -21,10 +21,10 @@ public class InitBean implements Init {
 
     @PostConstruct
     public void init() {
-        User ludo = new User("ludo","ludo");
-        User trima = new User("trima","trima");
-        em.persist(ludo);
-        em.persist(trima);
+        User stephane = new User("stephane","talbot");
+        User bob = new User("bob","eponge");
+        em.persist(stephane);
+        em.persist(bob);
 
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -35,16 +35,16 @@ public class InitBean implements Init {
 
             ArrayList<Entry> entriesAnnecy = new ArrayList<Entry>();
             ArrayList<Entry> entriesChambe = new ArrayList<Entry>();
-            Entry entry1 = new Entry(simpleDateFormat.parse("25/12/2010"),"Visualiser une carte",45,2,"Pourvoir visualiser la liste des magasins");
-            Entry entry2 = new Entry(simpleDateFormat.parse("25/12/2012"),"Ajouter un item",45,2,"Ajouter une item dans le panier");
-            Entry entry3 = new Entry(simpleDateFormat.parse("25/12/2019"),"Vider le panier",45,2,"Vider le panier");
-            Entry entry4 = new Entry(simpleDateFormat.parse("26/08/2019"),"Manger un pandoro",45,2,"Miam");
+            Entry entry1 = new Entry(simpleDateFormat.parse("20/12/2012"),"Visualiser une carte",45,2,"Pouvoir visualiser la liste des magasins");
+            Entry entry2 = new Entry(simpleDateFormat.parse("25/12/2014"),"Ajouter un item",45,2,"Ajouter un item dans le panier");
+            Entry entry3 = new Entry(simpleDateFormat.parse("30/12/2017"),"Vider le panier",45,2,"Vider le panier");
+            Entry entry4 = new Entry(simpleDateFormat.parse("31/12/2019"),"Reviser JavaEE",45,2,"C'est pas du Kotlin");
 
             ArrayList<Comment> commentsEntry1 = new ArrayList<Comment>();
             ArrayList<Comment> commentsEntry2 = new ArrayList<Comment>();
-            Comment comment1 = new Comment("besoin d'aide",trima);
-            Comment comment2 = new Comment("tu te débrouille",ludo);
-            Comment comment3 = new Comment("j'ai bientôt finit :)",ludo);
+            Comment comment1 = new Comment("besoin d'aide",bob);
+            Comment comment2 = new Comment("tu te débrouille",stephane);
+            Comment comment3 = new Comment("j'ai bientôt finit :)",stephane);
             commentsEntry1.add(comment1);
             commentsEntry1.add(comment2);
             commentsEntry2.add(comment3);
