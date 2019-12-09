@@ -1,0 +1,25 @@
+
+allprojects {
+}
+
+subprojects {
+	apply plugin: 'eclipse-wtp'
+	apply plugin: 'idea'
+}
+
+project(':BacklogEjb'){
+	eclipse.wtp.facet { 
+			    facet name: 'java', version: '1.7'
+	            //facet name: 'jst.cdi', version: '2.0'
+	            facet name: 'jst.ejb', version: '3.1'
+	            facet name: 'jpt.jpa', version: '2.1' 
+	}
+}
+
+project(':BacklogWeb'){
+	eclipse.wtp.facet { 
+			    facet name: 'java', version: '1.7'
+	            //facet name: 'jst.cdi', version: '2.0'
+	            facet name: 'jst.web', version: '3.1'
+	}
+}
