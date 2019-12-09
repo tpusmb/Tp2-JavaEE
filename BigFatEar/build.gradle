@@ -12,6 +12,6 @@ dependencies {
     //deploy project(':CompteEjb')
 	//deploy project(':CompteWeb')
     deploy project(path: ':BigFatEjb', configuration: 'archives')
-	deploy project(path: ':BacklogWeb', configuration: 'archives')
+	deploy project(path: ':BigFatWeb', configuration: 'archives')
 }
 

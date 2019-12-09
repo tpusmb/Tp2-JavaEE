@@ -16,7 +16,7 @@ project(':BigFatEjb'){
 	}
 }
 
-project(':BacklogWeb'){
+project(':BigFatWeb'){
 	eclipse.wtp.facet { 
 			    facet name: 'java', version: '1.7'
 	            //facet name: 'jst.cdi', version: '2.0'

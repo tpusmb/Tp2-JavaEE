@@ -1,12 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: SEBIRE
-  Date: 25/11/2018
-  Time: 13:56
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -21,15 +14,15 @@
 <header class="navbar" style="padding: 1rem; box-shadow: 2px 2px 2px lightgrey;">
     <!-- Logo, here on the left -->
     <section class="navbar-primary">
-        <a href="/BacklogWeb" class="navbar-brand"><img src="asset/img/favicon-256.png" width="32" height="32" alt=""></a>
+        <a href="/BigFatWeb" class="navbar-brand"><img src="asset/img/favicon-256.png" width="32" height="32" alt=""></a>
     </section>
     <section class="navbar-section">
         <c:choose>
             <c:when test="${currentUser == null}">
-                <a href="/BacklogWeb/LoginServlet" class="btn btn-success">Sign In</a>
+                <a href="/BigFatWeb/LoginServlet" class="btn btn-success">Sign In</a>
             </c:when>
             <c:otherwise>
-                <a href="/BacklogWeb" class="btn btn-link"><i class="icon icon-2x icon-people"></i>  <span class="text-large" style="margin-left: 0.5rem;vertical-align: super;">${sessionScope.currentUser.username}</span> </a>
+                <a href="/BigFatWeb" class="btn btn-link"><i class="icon icon-2x icon-people"></i>  <span class="text-large" style="margin-left: 0.5rem;vertical-align: super;">${sessionScope.currentUser.username}</span> </a>
                 <form class="m-0" action="LogoutServlet" method="post">
                     <button class="btn btn-link"><i class="icon icon-2x icon-shutdown"></i></button>
                 </form>

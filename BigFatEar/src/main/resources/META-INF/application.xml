@@ -6,8 +6,8 @@
   </module>
   <module>
     <web>
-      <web-uri>BacklogWeb.war</web-uri>
-      <context-root>BacklogWeb</context-root>
+      <web-uri>BigFatWeb.war</web-uri>
+      <context-root>BigFatWeb</context-root>
     </web>
   </module>
 </application>
